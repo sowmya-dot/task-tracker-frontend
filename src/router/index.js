@@ -1,8 +1,9 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import Login from '../components/Login.vue';
-import Signup from '../components/Signup.vue';
+import Login from '../components/Login_component.vue';
+import Signup from '../components/Signup_component.vue';
 import TaskList from '../components/TaskList.vue';
+import store from '@/store';
 
 const routes = [
   { path: '/login', component: Login },
