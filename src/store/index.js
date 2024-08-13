@@ -30,7 +30,7 @@ const store = createStore({
   actions: {
     async login({ commit }, credentials) {
       try {
-        const response = await axios.post('https://task-tracker-backend-1.onrender.com/auth/login', credentials);
+        const response = await axios.post('https://{#task-tracker-backend-1.onrender.com#}localhost:3000/auth/login', credentials);
         commit('setAuth', { isAuthenticated: true, token: response.data.token });
       } catch (error) {
         console.error(error);
@@ -38,14 +38,14 @@ const store = createStore({
     },
     async signup(credentials) {
       try {
-        await axios.post('https://task-tracker-backend-1.onrender.com/auth/signup', credentials);
+        await axios.post('https://{#task-tracker-backend-1.onrender.com#}localhost:3000/auth/signup', credentials);
       } catch (error) {
         console.error(error);
       }
     },
     async fetchTasks({ commit }) {
       try {
-        const response = await axios.get('https://task-tracker-backend-1.onrender.com/tasks', {
+        const response = await axios.get('https://{#task-tracker-backend-1.onrender.com#}localhost:3000/tasks', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         commit('setTasks', response.data);
@@ -55,7 +55,7 @@ const store = createStore({
     },
     async addTask({ commit }, task) {
       try {
-        const response = await axios.post('https://task-tracker-backend-1.onrender.comSS/tasks', task, {
+        const response = await axios.post('https://{#task-tracker-backend-1.onrender.com#}localhost:3000/tasks', task, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         commit('addTask', response.data);
