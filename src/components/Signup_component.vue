@@ -15,7 +15,7 @@
           <label for="confirmPassword">Confirm Password</label>
           <input v-model="confirmPassword" id="confirmPassword" type="password" required />
         </div>
-        <button type="submit">Signup</button>
+        <button @click="submit">Signup</button>
       </form>
     </div>
   </template>

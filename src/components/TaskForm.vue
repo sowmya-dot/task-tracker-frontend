@@ -7,7 +7,7 @@
           <label for="title">Title</label>
           <input v-model="title" id="title" type="text" required />
         </div>
-        <button type="submit">Add Task</button>
+        <button @click="submit">Add Task</button>
       </form>
     </div>
   </template>
