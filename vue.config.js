@@ -9,3 +9,8 @@ module.exports = {
     plugins: [new BundleAnalyzerPlugin()]
   }
 };
+module.exports = {
+  devServer: {
+    disableHostCheck: true
+  }
+}
